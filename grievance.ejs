@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Grievance</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grievance Submission</h1>
+        
+        <!-- Messages for User Actions -->
+        <% if (message && message.text) { %>
+            <div id="message" class="message <%= message.type %>">
+                <%= message.text %>
+            </div>
+        <% } %>
+        
+        <!-- Grievance Submission Form -->
+        <div id="grievance-form" class="form-box">
+            <h2>Submit a Grievance</h2>
+            <form action="/submit-grievance" method="POST">
+                <input type="text" name="type" placeholder="Grievance Type" required>
+                <textarea name="description" placeholder="Description" required></textarea>
+                <button type="submit">Submit Grievance</button>
+            </form>
+        </div>
+
+        <!-- Logout Button -->
+        <a href="/logout" class="btn-logout">Logout</a>
+    </div>
+</body>
+</html>

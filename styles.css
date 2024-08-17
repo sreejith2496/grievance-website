@@ -1,0 +1,201 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    background-color: #e9ecef; /* Light grey background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+    width: 90%; /* Increase width for better responsiveness */
+    max-width: 600px; /* Set a max-width for better centering */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #0052aa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text and inline elements */
+}
+
+/* Heading styling */
+h1 {
+    color: #1e1e1e;
+    font-weight: 700; /* Make heading bold */
+}
+
+/* Message styling */
+#message {
+    margin-bottom: 20px;
+    display: block; /* Ensure message is displayed */
+}
+
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block; /* Center the message box */
+}
+
+.message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Form box styling */
+.form-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    max-width: 70%; /* Allow form to use full width of container */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Styling for input fields */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure input fields respect padding and border */
+}
+
+/* Ensure form elements are not inline or affected by other styles */
+input[type="text"], input[type="email"], input[type="password"] {
+    display: block; /* Ensure inputs are block elements */
+    width: 100%; /* Ensure full width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing for textareas */
+    min-height: 100px; /* Set a minimum height for textareas */
+}
+
+/* Button styling */
+button, a.btn-logout {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ba3d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 200px; /* Set a max-width for buttons */
+    margin: 10px auto; /* Center buttons horizontally */
+    display: block; /* Make buttons block elements */
+    box-sizing: border-box; /* Ensure button respects padding */
+    text-decoration: none;
+}
+
+button:hover, a.btn-logout:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Button styling for different types */
+a.btn-logout {
+    background-color: #dc3545;
+}
+
+a.btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Additional styling for form descriptions */
+.form-description {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+.btn-go-back{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ba3d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 200px; /* Set a max-width for buttons */
+    margin: 10px auto; /* Center buttons horizontally */
+    display: block; /* Make buttons block elements */
+    box-sizing: border-box; /* Ensure button respects padding */
+    text-decoration: none;
+}
+
+/* Grievance item styling */
+.grievance-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Grievance item heading */
+.grievance-box h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #0e56ba;
+}
+
+/* Grievance item paragraph */
+.grievance-box p {
+    margin: 0;
+    color: #555;
+}
+
+/* View Document button (removed, so this style is no longer needed) */
+.btn-view-document {
+    display: none;
+}
+
+.h2 {
+    font-size: 2px;
+}
+
+/* Styling for select elements */
+select {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure select respects padding and border */
+}

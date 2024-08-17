@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        
+        <!-- Messages for Admin Actions -->
+        <% if (message && message.text) { %>
+            <div id="message" class="message <%= message.type %>">
+                <%= message.text %>
+            </div>
+        <% } %>
+        
+        <!-- Display grievances -->
+        <div id="grievances">
+            <% if (grievances && grievances.length > 0) { %>
+                <% grievances.forEach(function(grievance, index) { %>
+                    <div class="grievance-box">
+                        <h2>Grievance :<%= index + 1 %></h2>
+                        <p><strong>Grievance Type:&nbsp; </strong> <%= grievance.type %></p>
+                        <p><strong>Description:&nbsp; </strong> <%= grievance.description %></p>
+                        <p><strong>Submitted By:&nbsp; </strong> <%= grievance.user.username || grievance.user.email %></p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No grievances submitted yet.</p>
+            <% } %>
+        </div>
+
+        <!-- Go Back Button -->
+        <a href="/" class="btn-go-back">Go Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Website</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Grievance Portal</h1>
+        
+        <!-- Messages for User Actions -->
+        <div id="message" class="message">
+            <% if (message && message.text) { %>
+                <div class="<%= message.type %>"><%= message.text %></div>
+            <% } %>
+        </div>
+        
+        <!-- User Registration Form -->
+        <div class="form-box">
+            <h2>Register</h2>
+            <p class="form-description">New user? Register here to create an account!</p>
+            <form action="/register" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        
+        <!-- User Login Form -->
+        <div class="form-box">
+            <h2>Login</h2>
+            <p class="form-description">Already registered? Login here to access your account!</p>
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Login Form -->
+        <div class="form-box">
+            <h2>Admin Login</h2>
+            <form action="/admin/login" method="POST">
+                <input type="text" name="name" placeholder="Admin Name" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Go Back Button -->
+        
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Whitematrix by Sreejith Sali</p>
+    </div>
+</body>
+</html>
